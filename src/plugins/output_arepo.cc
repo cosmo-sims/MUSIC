@@ -711,6 +711,9 @@ public:
   { /* skip */
   }
 
+    void write_gas_properties(const grid_hierarchy &gh)                                                                             
+    { /* skip */                                                                                                                    }
+
   void finalize(void)
   {
     // generate and add contiguous IDs for each particle type we have written

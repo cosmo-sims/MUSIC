@@ -969,6 +969,8 @@ class cart_output_plugin : public output_plugin
 
 		void write_gas_potential( const grid_hierarchy& gh ){}
 
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
 		void finalize( void )
 		{
 			this->write_header_file();

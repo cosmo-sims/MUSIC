@@ -531,6 +531,9 @@ class gamer2_output_plugin : public output_plugin
         }
     }
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
     void finalize(void)
     {
         assemble_gamer2_file();

@@ -694,6 +694,7 @@ int main(int argc, const char *argv[])
 				if (!do_LLA)
 				{
 					music::ulog.Print("Writing baryon density");
+					the_output_plugin->write_gas_properties(f);
 					the_output_plugin->write_gas_density(f);
 				}
 
@@ -740,6 +741,7 @@ int main(int argc, const char *argv[])
 					u.deallocate();
 					normalize_density(f);
 					music::ulog.Print("Writing baryon density");
+					the_output_plugin->write_gas_properties(f);
 					the_output_plugin->write_gas_density(f);
 				}
 
@@ -1273,7 +1275,10 @@ int main(int argc, const char *argv[])
 				normalize_density(f);
 
 				if (!do_LLA)
+				{
 					the_output_plugin->write_gas_density(f);
+				        the_output_plugin->write_gas_properties(f);
+				}
 				else
 				{
 					u1 = f;
@@ -1301,6 +1306,7 @@ int main(int argc, const char *argv[])
 
 					music::ulog.Print("Writing baryon density");
 					the_output_plugin->write_gas_density(f);
+					the_output_plugin->write_gas_properties(f);
 				}
 			}
 			else if (do_baryons && bsph)
@@ -1317,6 +1323,7 @@ int main(int argc, const char *argv[])
 
 				music::ulog.Print("Writing baryon density");
 				the_output_plugin->write_gas_density(f);
+				the_output_plugin->write_gas_properties(f);
 				u1 = f;
 				u1.zero();
 

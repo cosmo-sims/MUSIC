@@ -1622,6 +1622,9 @@ public:
 			header_.mass[2] = omegab_ * rhoc * pow(header_.BoxSize, 3.) / pow(2, 3 * levelmax_);
 	}
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
 	void finalize(void)
 	{
 		this->assemble_gadget_file();

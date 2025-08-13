@@ -123,6 +123,9 @@ public:
 	
 	//! purely virtual prototype to write the baryon gravitational potential (from which displacements are computed in 1LPT)
 	virtual void write_gas_potential( const grid_hierarchy& gh )  = 0;
+
+	//! purely virtual prototype to write the baryon density field
+        virtual void write_gas_properties( const grid_hierarchy& gh )  = 0;
 	
 	//! purely virtual prototype for all things to be done at the very end
 	virtual void finalize( void ) = 0;

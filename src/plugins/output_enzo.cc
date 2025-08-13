@@ -596,6 +596,9 @@ public:
 		dump_grid_data(enzoname, gh, the_sim_header.omega_b / the_sim_header.omega_m, 1.0);
 	}
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
 	void finalize(void)
 	{
 	}

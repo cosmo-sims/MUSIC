@@ -504,6 +504,7 @@ protected:
     std::vector<T> masses(npfine);
     std::vector<T> smoothing_lengths(npfine);
     std::vector<T> internal_energies(npfine);
+    std::cout << " - Swift: Wrote gas properties." << std::endl;
 
     T gas_mass = omega_b * rhoCrit * pow(boxSize * posFac, 3.0) / pow(2, 3 * levelmax_);
     T smoothing_length = boxSize / hubbleParam / pow(2, levelmax_);
@@ -704,10 +705,12 @@ public:
   }
 
   void write_gas_properties(const grid_hierarchy &gh) {
-    if (!doublePrec)
-      __write_gas_properties<float>(gh);
-    else
-      __write_gas_properties<double>(gh);
+    if (!doublePrec){
+      std::cout << " - write gas potential in double" << std::endl;
+      __write_gas_properties<float>(gh);}
+    else{
+      std::cout << " - write gas potential in single" << std::endl;
+      __write_gas_properties<double>(gh);}
   }
 
   void write_gas_density(const grid_hierarchy &gh) {
@@ -717,7 +720,7 @@ public:
       massTable[GAS_PARTTYPE] = omega_b * rhoCrit * pow(boxSize * posFac, 3.0) / pow(2, 3 * levelmax_);
   }
 
-  void write_gas_potential(const grid_hierarchy &gh) { /* skip */
+  void write_gas_potential(const grid_hierarchy &gh) { std::cout << " Skip gas potential." << std::endl;
   }
 
   void finalize(void) {
