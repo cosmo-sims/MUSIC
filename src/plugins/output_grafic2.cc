@@ -565,6 +565,9 @@ public:
 	{ /* do nothing, not used... */
 	}
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
 	void finalize(void)
 	{
 	}

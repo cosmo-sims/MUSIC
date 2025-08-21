@@ -1374,6 +1374,9 @@ public:
         //... we don't care about gas density for TIPSY
     }
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
     void finalize (void)
     {
         this->assemble_tipsy_file ();

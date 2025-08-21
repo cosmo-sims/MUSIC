@@ -1562,6 +1562,9 @@ public:
 	
 	void write_gas_density( const grid_hierarchy& gh )
 	{ }
+
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
 	
 	void finalize( void )
 	{	

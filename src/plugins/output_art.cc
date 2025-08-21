@@ -885,6 +885,8 @@ public:
 	{
 	}
 
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
 	void finalize(void)
 	{
 		this->write_header_file();

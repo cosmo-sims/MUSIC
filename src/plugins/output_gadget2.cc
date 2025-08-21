@@ -1381,6 +1381,8 @@ public:
 		// do nothing as we write out positions
 	}
 
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
+
 	void finalize(void)
 	{
 		this->assemble_gadget_file();

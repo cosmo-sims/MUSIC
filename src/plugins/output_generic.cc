@@ -239,6 +239,8 @@ public:
 			write2HDF5( fname_, sstr, *gh.get_grid(ilevel) );
 		}
 	}
+
+    void write_gas_properties(const grid_hierarchy &gh)                                                                                                                                                                                                             { /* skip */                                                                                                                    }
 	
 	void finalize( void )
 	{	}
